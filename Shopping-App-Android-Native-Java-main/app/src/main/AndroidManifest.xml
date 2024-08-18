@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shoppingapp">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/shopping"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShoppingApp">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBC_nkxC3zGi72xTc5RLcnzvtMGio8ppxM" />
+        <activity
+            android:name=".ContactActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight"
+            android:label="Contact"
+            android:parentActivityName=".HomeActivity"/>
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false"
+            android:label="Setting"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PurchasesActivity"
+            android:exported="true"
+            android:label="Purchases"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true"
+            android:label="My Profile"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".ProductsCardActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DisplayProductsActivity"
+            android:exported="false"
+            android:label="Product Details"
+            android:parentActivityName=".HomeActivity"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Products"
+            android:parentActivityName=".HomeActivity" />
+    </application>
+
+</manifest>
